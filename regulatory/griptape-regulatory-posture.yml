@@ -1,0 +1,18 @@
+generated: '2026-10-20'
+method: probed
+source: https://www.foundry.com/privacy-notice
+signals:
+  data_subject_request:
+    evidence:
+      - source: https://www.foundry.com/privacy-notice
+        http_status: 200
+        fetched: "true"
+        quote: "Data Subjects means a living, identified or identifiable individual about whom we hold Personal Data."
+        note: Defines data subjects but does not detail request procedures.
+  data_retention:
+    evidence:
+      - source: https://www.foundry.com/privacy-notice
+        http_status: 200
+        fetched: "true"
+        quote: "The Notice explains how Foundry generally collects, stores, uses, retains and shares your Personal Data."
+        note: Mentions retention generally without specifying periods.

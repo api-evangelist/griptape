@@ -1,23 +1,96 @@
 aid: griptape
+
 name: Foundry
-description: 'Foundry is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/65d658559223871198e78bca/69a6e732e154609786d9e9cc_feb9d9ee07bfd00b321c90c53f7cfe3d_Open-Graph.png
+
+description: Griptape is a platform that enables developers and creative professionals to orchestrate multiple AI models and agents within secure,
+  professional workflows. It offers a visual node‑based builder, a Python framework, and cloud deployment options, allowing users to build, scale,
+  and manage AI‑powered applications without deep prompt‑engineering expertise. Griptape focuses on flexibility, security, and collaboration,
+  providing tools for both code‑first developers and no‑code creators to integrate generative AI into their products.
+
 url: https://raw.githubusercontent.com/api-evangelist/griptape/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-20 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-20'
+
 modified: '2026-10-20'
+
 tags:
-- Company
-apis: []
+- AI
+- Platform
+- Workflow
+- Automation
+- OpenSource
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/griptape-rules.yml
+- type: JSONLD
+  url: json-ld/griptape-context.jsonld
+- type: Vocabulary
+  url: vocabulary/griptape-vocabulary.yml
+- type: DataModel
+  url: data-model/griptape-data-model.yml
+- type: Conformance
+  url: conformance/griptape-conformance.yml
+- type: LLMsTxt
+  url: llms/griptape-llms.txt
+- type: Hosts
+  url: hosts/griptape-hosts.yml
+- type: Vendors
+  url: vendors/griptape-vendors.yml
+- type: SDKs
+  url: packages/griptape-packages.yml
+- type: Packages
+  url: packages/griptape-packages.yml
+- type: Leadership
+  url: https://www.griptape.ai/team
+- type: GettingStarted
+  url: https://docs.griptape.ai/stable/griptape-cloud/data-sources/getting-started-with-data-sources
+- type: DeveloperPortal
+  url: https://docs.griptapenodes.com
+- type: APIReference
+  url: https://docs.griptape.ai/stable/griptape-cloud/api/api-reference/
+- type: DomainSecurity
+  url: security/griptape-domain-security.yml
 - type: Website
   url: https://griptape.ai/
+- type: Documentation
+  url: https://docs.griptape.ai/stable/
+- type: Blog
+  url: https://www.griptape.ai/blog
+
+apis:
+- aid: griptape:griptape-api
+  name: Foundry API
+  description: 'Foundry API as documented publicly: 2 operations. Contract generated from the documentation by API Evangelist (2026-10-20); not
+    the provider''s own document.'
+  humanURL: https://docs.griptape.ai/stable/griptape-cloud/data-sources/refresh-data
+  baseURL: https://cloud.griptape.ai
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/griptape-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/griptape-post-api-knowledge-bases-request-schema.json
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 18
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

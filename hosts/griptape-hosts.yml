@@ -1,0 +1,138 @@
+generated: '2026-10-21'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 10
+  own: 8
+  other_domain: 1
+  platform: 1
+  roles:
+  - api
+  - docs
+  - marketing
+  - other
+  - portal
+  - website
+hosts:
+- host: api.griptape.ai
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: griptape.ai
+  role: api
+  relation: own
+- host: app.nodes.griptape.ai
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: griptape.ai
+  role: other
+  relation: own
+- host: cloud.griptape.ai
+  found_by:
+  - apis[]
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - api
+  registrable_domain: griptape.ai
+  role: other
+  relation: own
+- host: docs.griptape.ai
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - site-links
+  - namespace-probe
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - GettingStarted
+  - APIReference
+  - Documentation
+  serves:
+  - docs
+  title: Overview - Griptape Docs
+  status: 200
+  registrable_domain: griptape.ai
+  role: docs
+  relation: own
+- host: docs.griptapenodes.com
+  found_by:
+  - pointer
+  - docs-index
+  types:
+  - DeveloperPortal
+  serves:
+  - docs
+  registrable_domain: griptapenodes.com
+  role: portal
+  relation: other-domain
+- host: griptape-cloud-assets.s3.amazonaws.com
+  found_by:
+  - spec-found
+  types: []
+  serves:
+  - spec
+  registrable_domain: amazonaws.com
+  role: other
+  relation: platform
+- host: griptape.ai
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: griptape.ai
+  role: website
+  relation: own
+- host: learn.griptape.ai
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: griptape.ai
+  role: other
+  relation: own
+- host: nodes.griptape.ai
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: griptape.ai
+  role: other
+  relation: own
+- host: www.griptape.ai
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - well-known
+  types:
+  - Leadership
+  - Blog
+  serves: []
+  registrable_domain: griptape.ai
+  role: marketing
+  relation: own
